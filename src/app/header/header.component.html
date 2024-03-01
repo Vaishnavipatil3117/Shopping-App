@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-light position-sticky top-0 z-1">
+    <div class="container-fluid py-1 px-md-5">
+        <a class="navbar-brand px-3 " href="#">
+            <h3 class="fw-semibold fs-2 ">ShoppingApp</h3>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ms-4  " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4 ms-4">
+                <li class="nav-item">
+                    <a class="nav-link link " routerLink="/home" routerLinkActive="active-link"
+                       ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link " routerLink="/products" routerLinkActive="active-link"
+                       ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }">Products</a>
+                </li> 
+                <select class="nav-item nav-link border-0 bg-light">
+                    @for(cs of category;track category)
+                    {
+                        <option value="">{{cs}}</option>
+                    } 
+                </select>
+               
+                <li class="nav-item">
+                    <a class="nav-link link " routerLink="/" routerLinkActive="active-link"
+                       ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link " routerLink="/" routerLinkActive="active-link"
+                       ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }">Blog</a>
+                </li>
+            </ul>
+            <form class="d-flex p-2  rounded-3 justify-content-center" role="search">
+                <input class="form-control input" type="search" placeholder="Search" aria-label="Search">
+                
+            </form>
+            <div class=" text-end mx-2 ">
+                <button class="btn btn-sm btn-outline-dark shadow-none me-lg-2 me-3">Search</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<router-outlet />

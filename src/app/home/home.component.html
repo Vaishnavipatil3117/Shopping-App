@@ -1,0 +1,164 @@
+
+<main>
+  <section class="bg-light-blue overflow-hidden mt-5 padding-xlarge" >
+    <div class="row d-flex flex-wrap align-items-center">
+      <div class="col-md-6 col-sm-12">
+        <div class="text-content offset-md-3 padding-medium">
+          <h2 class=" display-2 text-dark" >Your Products Are Great</h2>
+          <a href="#" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="mx-md-auto">
+          <img  src="https://m.economictimes.com/thumb/msid-102726769,width-1200,height-900,resizemode-4,imgsize-121318/6-best-redmi-mobiles-under-10000.jpg" alt="" style="width: 750px;">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+      <div class="container">
+        <div class="my-5 px-4">
+            <h2 class="fw-bold h-font text-center">Facilities</h2>
+            <div class="h-line bg-dark"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-lg-4 mb-md-4 text-center bg-white  py-4 my-3">
+                <div class="row">
+                    <div class="icon"><i class="bi bi-cart3"></i></div>
+                    <div class="mt-2 text-center" >
+                        <h4>FREE DELIVERY</h4>
+                        <p>Dolores consequuntur voluptatibus omnis, saepe recusandae ullam tempora fugiat.</p>
+                    </div>
+                </div>	
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-4 mb-md-4 text-center bg-white  py-4 my-3">
+                <div class="row ">
+                    <div class="icon"><i class="bi bi-award"></i></div>
+                    <div class="mt-2 text-center">
+                        <h4>QUALITY GUARANTEE</h4>
+                        <p>Dolores consequuntur voluptatibus omnis, saepe recusandae ullam tempora fugiat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-4 mb-md-4 text-center bg-white  py-4 my-3">
+                <div class="row ">
+                    <div class="icon"><i class="bi bi-tag"></i></div>
+                    <div class="mt-2 text-center">
+                        <h4>DAILY OFFERS</h4>
+                        <p>Dolores consequuntur voluptatibus omnis, saepe recusandae ullam tempora fugiat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-lg-4 mb-md-4 text-center bg-white  py-4 my-3">
+                <div class="row ">
+                    <div class="icon"><i class="bi bi-shield-plus"></i></div>
+                    <div class="mt-2 text-center">
+                        <h4>100% SECURE PAYMENT</h4>
+                        <p>Dolores consequuntur voluptatibus omnis, saepe recusandae ullam tempora fugiat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="my-5 px-4">
+            <h2 class="fw-bold h-font text-center">Mobile Product</h2>
+            <div class="h-line bg-dark"></div>
+        </div>
+        <div class="row">
+          @for(product of products;track products)
+                {
+            <div class="col-sm-6 col-lg-3" >
+              <div class="card border-0">
+                <img [src]=product.image alt="">
+                <p class="text-center">{{ product.name }}</p>
+                <h5 class="text-center">{{ product.price|currency:'INR' }}</h5>
+              </div>
+            </div>
+          }  
+        </div>                
+    </div>
+    <div class="container">
+        <div class="my-5 px-4">
+            <h2 class="fw-bold h-font text-center">Smart Watches</h2>
+            <div class="h-line bg-dark"></div>
+        </div>
+        <div class="row mt-5">
+          @for(watches of watches;track watches)
+                {
+            <div class="col-sm-6 col-lg-3 border-0">
+              <div class="card border-0">
+                
+                <img [src]=watches.image alt="">
+                <p class="text-center">{{ watches.name }}</p>
+                <h5 class="text-center">{{ watches.price|currency:'INR' }}</h5>
+              </div>
+            </div>
+          }  
+        </div>                
+    </div>
+    <div class="container" >
+      <div class="bg-light-blue overflow-hidden mt-5 padding-xlarge" >
+        <div class="row d-flex flex-wrap align-items-center">
+          <div class="col-md-6 col-sm-12">
+            <div class="text-content offset-md-3 padding-medium">
+              <h3>10% off</h3>
+              <h2 class=" display-2 pb-5 text-uppercase text-dark" >NEW YEAR SALE</h2>
+              <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="mx-md-3">            
+              <img  src="https://easycart.in/wp-content/uploads/2019/07/1-56.png" alt="" style="height: 350px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="my-5 px-4">
+          <h2 class="fw-bold h-font text-center">Blog</h2>
+          <div class="h-line bg-dark"></div>
+        </div>
+        <div class="display-header d-flex justify-content-between pb-3">
+          <h2 class="display-7 text-dark text-uppercase">Latest Posts</h2>
+          <div class="btn-right">
+            <a href="#" class="btn btn-medium btn-normal text-uppercase">Read Blog</a>
+          </div>
+        </div>
+        <div class="row">
+          @for(blog of blog;track blog)
+                {
+            <div class="col-sm-8 col-lg-4 border-0">
+              <div class="card border-0">
+                <img [src]=blog.image alt="">
+                <p class="text-left pt-2">{{ blog.date }} <span>-{{blog.category}}</span></p>
+                <h5 class="text-left pt-0 mt-0">{{ blog.title }}</h5>
+              </div>
+            </div>
+          }  
+        </div>  
+      </div>
+    </div>
+    <div id="subscribe" class="container-grid padding-large position-relative overflow-hidden my-5">
+      <div class="container">
+        <div class="row">
+          <div class="subscribe-content bg-dark d-flex flex-wrap justify-content-center align-items-center pt-5 pb-5">
+            <div class="col-md-6 col-sm-12">
+              <div class="display-header pe-3">
+                <h2 class="display-7 text-uppercase text-light pt-3">Subscribe Us Now</h2>
+                <p>Get latest news, updates and deals directly mailed to your inbox.</p>
+              </div>
+            </div>
+            <div class="col-md-5 col-sm-12">
+              <form class="subscription-form validate">
+                <div class="input-group flex-wrap">
+                  <input class="form-control btn-rounded-none" type="email" name="EMAIL" placeholder="Your email address here" required="">
+                  <button class="btn btn-medium btn-primary text-uppercase btn-rounded-none" type="submit" name="subscribe">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
